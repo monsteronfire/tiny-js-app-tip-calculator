@@ -1,11 +1,11 @@
 function calculate(event) {
   event.preventDefault();
-  var amount = document.querySelector('#amount').value;
-  var percentage = document.querySelector('#percentage').value;
-  var tipInput = document.querySelector('#tip');
-  var totalInput = document.querySelector('#total');
-  var tipAmount = amount * (percentage/100);
-  var total = Number(amount) + tipAmount;
+  var billAmount = document.querySelector('#bill-amount').value;
+  var percentageTip = document.querySelector('#percentage-tip').value;
+  var tipInput = document.querySelector('#tip-amount');
+  var totalInput = document.querySelector('#total-payable');
+  var tipAmount = billAmount * (percentageTip/100);
+  var total = Number(billAmount) + tipAmount;
 
   tipInput.value = tipAmount.toFixed(2);
   totalInput.value = total.toFixed(2);
@@ -14,3 +14,7 @@ function calculate(event) {
 }
 
 document.querySelector('#calculator').addEventListener('submit', calculate);
+
+var TipCalculator = {
+
+};
